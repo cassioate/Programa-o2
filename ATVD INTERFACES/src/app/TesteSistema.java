@@ -78,7 +78,7 @@ public class TesteSistema {
 		sistema.adicionarCliente(c);
 		sistema.adicionarPedido(1, bebida);
 		sistema.adicionarPedido(1, refeicao);
-		assertEquals(20.5, sistema.computarPagamentoCliente(1), 0);
+		assertEquals(23.3, sistema.computarPagamentoCliente(1), 0);
 	}
 	
 	@Test
@@ -86,7 +86,7 @@ public class TesteSistema {
 		sistema.adicionarCliente(c);
 		sistema.adicionarPedido(1, bebida);
 		sistema.adicionarPedido(1, refeicao);
-		sistema.receberPagamentoCliente(1, 20.5);
+		sistema.receberPagamentoCliente(1, 23.3);
 	}
 	
 	@Test (expected = PagamentoInvalidoException.class)
@@ -94,6 +94,6 @@ public class TesteSistema {
 		sistema.adicionarCliente(c);
 		sistema.adicionarPedido(1, bebida);
 		sistema.adicionarPedido(1, refeicao);
-		sistema.receberPagamentoCliente(1, 20.4);
+		sistema.receberPagamentoCliente(1, 22.3);
 	}
 }

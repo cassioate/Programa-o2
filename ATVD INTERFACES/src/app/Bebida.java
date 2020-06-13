@@ -20,7 +20,7 @@ public class Bebida implements Item{
 
 	@Override
 	public double getPreco() {
-		return sabor.getValor();
+		return sabor.getValor() + tamanho.getTamanho();
 	}
 
 	@Override
