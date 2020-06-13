@@ -8,10 +8,6 @@ public enum Sabor {
 	private Sabor(double valor) {
 		this.valor = valor;
 	}
-	
-	public double getSabor() {
-		return valor;
-	}
 
 	public double getValor() {
 		return valor;
