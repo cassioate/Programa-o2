@@ -24,9 +24,9 @@ public class TestContaCorrente {
 	@Test
 	public void testTransferir() throws SaldoInsuficienteException, SenhaInvalidaException {
 		corrente1.transferir("123456", 500, corrente2);
-		assertEquals(1487.5, corrente1.getSaldo(),0);
+		assertEquals(1498.75, corrente1.getSaldo(),0);
 		corrente2.transferir("123", 5500, corrente1);
-		assertEquals(6987.5, corrente1.getSaldo(),0);
+		assertEquals(6998.75, corrente1.getSaldo(),0);
 		assertEquals(44985.0, corrente2.getSaldo(),0);
 	}
 	

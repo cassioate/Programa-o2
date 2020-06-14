@@ -5,7 +5,7 @@ import Excecoes.SenhaInvalidaException;
 
 public class ContaCorrente extends ContaBancaria{
 
-	private double taxa = 0.025;
+	private double taxa = 0.0025;
 	private double taxaFixa = 15;
 	
 	public ContaCorrente(String nome, String senha, double saldo) {
