@@ -45,7 +45,7 @@ public class MinhaAgendaDeAniversarios implements AgendaDeAniversarios {
 		ArrayList<Aniversariante> retorno = new ArrayList<Aniversariante>();
 		boolean excecao = true;
 		for (Aniversariante a : aniversariantes) {
-			if (a.getNome() == nomeAniversariante) {
+			if (a.getNome().equals(nomeAniversariante)) {
 				retorno.add(a);
 				excecao = false;
 			} 
@@ -53,6 +53,7 @@ public class MinhaAgendaDeAniversarios implements AgendaDeAniversarios {
 		if(excecao == true) {
 			throw new NaoExisteAniversariante();
 			}
+		
 //		Tive que usar esse for para remover, porque não posso deletar em uma lista enquanto percorro ela, então tive que salvar em outra lista quem eu queria remover.
 		for (Aniversariante a: retorno) {
 			aniversariantes.remove(a);

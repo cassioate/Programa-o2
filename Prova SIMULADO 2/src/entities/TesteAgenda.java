@@ -49,6 +49,10 @@ public class TesteAgenda {
 		assertEquals(3, agenda.getAniversariantes().size());
 		agenda.removerAniversariante("Carlos");
 		assertEquals(2, agenda.getAniversariantes().size());
+		agenda.removerAniversariante("Cassio");
+		assertEquals(1, agenda.getAniversariantes().size());
+		agenda.removerAniversariante("Pedro");
+		assertEquals(0, agenda.getAniversariantes().size());
 	}
 	
 	@Test (expected = NaoExisteAniversariante.class)
