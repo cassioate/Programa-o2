@@ -14,8 +14,8 @@ public class BibliotecaFacisaPosGraduacao extends BibliotecaFacisa{
 	public double fazerEmprestimo(Livro livro, Data dataInicio, Data dataFim) 
 			throws LivroEmprestadoException {
 		double taxa = 2;
-		int ano = dataFim.getAno() - dataInicio.getAno() * 12;
-		int mes = dataFim.getMes() - dataInicio.getMes() * 30;
+		int ano = (dataFim.getAno() - dataInicio.getAno()) * 12 * 30;
+		int mes = (dataFim.getMes() - dataInicio.getMes()) * 30;
 		int dia = dataFim.getDia() - dataInicio.getDia();
 
 		for(Livro l: getListaDeLivros()) {
@@ -28,7 +28,8 @@ public class BibliotecaFacisaPosGraduacao extends BibliotecaFacisa{
 			}
 
 			}
-		double valor = ano+mes+dia*taxa;
+		double valor = (ano+mes+dia) *taxa;
+		System.out.println(valor);
 		return valor;
 	}
 	

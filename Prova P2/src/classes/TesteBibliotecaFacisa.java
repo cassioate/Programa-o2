@@ -65,7 +65,8 @@ public class TesteBibliotecaFacisa {
 	
 	@Test
 	public void testEmprestimoExistente() throws LivroInexistenteException, LivroEmprestadoException {
-		biblioteca.fazerEmprestimo(livro1, new Data(15, 1, 1849), new Data(15, 1, 1850));
+		double valor = biblioteca.fazerEmprestimo(livro1, new Data(15, 1, 1849), new Data(15, 1, 1850));
+		assertEquals(360, valor, 0);
 		assertEquals(livro1.isEmprestado(), true);
 	}
 	
@@ -76,6 +77,4 @@ public class TesteBibliotecaFacisa {
 		biblioteca.fazerEmprestimo(livro1, new Data(15, 1, 1849), new Data(15, 1, 1850));
 		assertEquals(livro1.isEmprestado(), true);
 	}
-	
-
 }
